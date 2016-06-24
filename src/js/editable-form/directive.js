@@ -62,7 +62,15 @@ angular.module('xeditable').directive('editableForm',
             if(attrs.onshow) {
               eForm.$onshow = angular.bind(eForm, $parse(attrs.onshow), scope);
             }
-
+            /**
+             * Called when form is shown.
+             * Alternative attribute to prevent jquery onshow event conflict.
+             * @var {method|attribute} onshow
+             * @memberOf editable-form
+             */
+            if(attrs.altonshow) {
+              eForm.$onshow = angular.bind(eForm, $parse(attrs.altonshow), scope);
+            }
             /**
              * Called when form hides after both save or cancel.
              * 

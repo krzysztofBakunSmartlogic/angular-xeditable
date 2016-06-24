@@ -121,6 +121,18 @@ angular.module('xeditable').factory('editableController',
       }
 
       /**
+       * Called when control is shown.
+       * Alternative attribute to prevent jquery onshow event conflict
+       *
+       * @var {method|attribute} onshow
+       * @memberOf editable-element
+       */
+      if($attrs.altonshow) {
+        self.onshow = function() {
+          return self.catchError($parse($attrs.altonshow)($scope));
+        };
+      }
+      /**
        * Called when control is hidden after both save or cancel.  
        * 
        * @var {method|attribute} onhide
