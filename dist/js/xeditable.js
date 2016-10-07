@@ -1,7 +1,7 @@
 /*!
-angular-xeditable - 0.1.12
+angular-xeditable - 0.1.13
 Edit-in-place for angular.js
-Build date: 2016-06-24 
+Build date: 2016-10-07 
 */
 /**
  * Angular-xeditable module 
@@ -833,9 +833,6 @@ angular.module('xeditable').factory('editableController',
     self.addListeners = function() {
       // bind keyup for `escape`
       self.inputEl.bind('keyup', function(e) {
-          if(!self.single) {
-            return;
-          }
 
           // todo: move this to editable-form!
           switch(e.keyCode) {

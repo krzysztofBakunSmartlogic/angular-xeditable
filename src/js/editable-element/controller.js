@@ -351,9 +351,6 @@ angular.module('xeditable').factory('editableController',
     self.addListeners = function() {
       // bind keyup for `escape`
       self.inputEl.bind('keyup', function(e) {
-          if(!self.single) {
-            return;
-          }
 
           // todo: move this to editable-form!
           switch(e.keyCode) {
