@@ -1,5 +1,5 @@
 /*!
-angular-xeditable - 0.1.13
+angular-xeditable - 0.1.14
 Edit-in-place for angular.js
 Build date: 2016-10-07 
 */
